@@ -1,0 +1,3 @@
+/home/michelle/fake/f/build/CMakeFiles/App.dir
+/home/michelle/fake/f/build/CMakeFiles/edit_cache.dir
+/home/michelle/fake/f/build/CMakeFiles/rebuild_cache.dir
