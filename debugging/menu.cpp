@@ -3,7 +3,7 @@
 
 #include "app.h"
 
-Menu::Menu(App *app) {}
+Menu::Menu(App* app) {}
 
 void Menu::display() {
   app->displayOutStream << TITLE << std::endl;

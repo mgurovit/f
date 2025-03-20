@@ -8,10 +8,10 @@ class Menu {
   static constexpr char TITLE[] = "Welcome to my App";
 
  private:
-  App *app;
+  App* app;
 
  public:
-  Menu(App *app);
+  Menu(App* app);
   void display();
   void handleUserInput(int choice);
 };

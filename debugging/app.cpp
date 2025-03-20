@@ -1,7 +1,7 @@
 
 #include "app.h"
 
-App::App(std::ostream &os)
+App::App(std::ostream& os)
     : logger(std::cerr), displayOutStream(os), menu(this) {}
 
 void App::run() {

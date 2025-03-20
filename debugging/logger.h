@@ -6,16 +6,16 @@
 
 class Logger {
  private:
-  std::ostream &outStream;
+  std::ostream& outStream;
 
  public:
-  Logger(std::ostream &os) : outStream(os) {}
+  Logger(std::ostream& os) : outStream(os) {}
 
-  void log(const std::string &message) {
+  void log(const std::string& message) {
     outStream << "LOG: " << message << std::endl;
   }
 
-  void logError(const std::string &message) {
+  void logError(const std::string& message) {
     outStream << "ERROR: " << message << std::endl;
   }
 };

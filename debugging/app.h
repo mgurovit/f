@@ -10,11 +10,11 @@ class App {
  private:
   Logger logger;
   Menu menu;
-  std::ostream &displayOutStream;
+  std::ostream& displayOutStream;
 
  public:
   friend class Menu;
 
-  App(std::ostream &os);
+  App(std::ostream& os);
   void run();
 };
