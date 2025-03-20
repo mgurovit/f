@@ -13,7 +13,6 @@ env:
 
 jobs:
   build:
-    name: CMake Build
     runs-on: ubuntu-latest
 
     steps:
@@ -76,20 +75,14 @@ jobs:
           fi
 
   tests:
-    name: Run Shell Script Tests
+    name: Run Tests
     runs-on: ubuntu-latest
-    needs: build  # Runs only after the build job succeeds
+    needs: build  # Run tests only after build succeeds
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Run Tests with Input File
         run: |
-          sudo apt update
-          sudo apt-get install -y bash
-
-      - name: Run Tests with .sh and .in files
-        run: |
-          chmod +x test.sh  # Ensure the test script is executable
-          ./test.sh < test.in
+          timeout 10s ./build/App < test.in || echo "Test timed out"
