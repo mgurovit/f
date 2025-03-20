@@ -1,8 +1,6 @@
 CMakeFiles/App.dir/debugging/app.cpp.o: \
  /home/michelle/fake/f/debugging/app.cpp /usr/include/stdc-predef.h \
- /home/michelle/fake/f/debugging/app.h \
- /home/michelle/fake/f/debugging/logger.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -150,5 +148,7 @@ CMakeFiles/App.dir/debugging/app.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/limits \
+ /home/michelle/fake/f/debugging/app.h \
+ /home/michelle/fake/f/debugging/logger.h \
  /home/michelle/fake/f/debugging/menu.h
