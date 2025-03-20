@@ -1,4 +1,6 @@
-
+#include <iostream>
+#include <limits>
+#include "app.h"
 #include "app.h"
 
 App::App(std::ostream& os)
@@ -10,13 +12,13 @@ void App::run() {
     int choice;
     std::cout << "Enter your choice: ";
 
-    if (!(std::cin >> choice)) {  //  Check for input failure
-      if (std::cin.eof()) break;  //  Stop loop if end of file is reached
-      std::cin.clear();           // Reset error state
-
-      std::cout << "ERROR: Invalid input, please enter a number between 1-4.\n";
+    if (!(std::cin >> choice)) {  // 
+      if (std::cin.eof()) break;  // 
+      std::cin.clear();  // Reset error state
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
+      std::cout << "Invalid input! Please enter a number.\n";
       continue;  // Skip iteration if input was invalid
-    }
+  }
 
     menu.handleUserInput(choice);
 
