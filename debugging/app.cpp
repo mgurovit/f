@@ -5,20 +5,23 @@ App::App(std::ostream& os)
     : logger(std::cerr), displayOutStream(os), menu(this) {}
 
 void App::run() {
-  menu.display();
-
-  int choice;
-  std::cout << "Enter your choice: ";
-  std::cin >> choice;
   while (true) {
+    menu.display();
+    int choice;
+    std::cout << "Enter your choice: ";
+
+    if (!(std::cin >> choice)) {  //  Check for input failure
+      if (std::cin.eof()) break;  //  Stop loop if end of file is reached
+      std::cin.clear();           // Reset error state
+
+      std::cout << "ERROR: Invalid input, please enter a number between 1-4.\n";
+      continue;  // Skip iteration if input was invalid
+    }
+
     menu.handleUserInput(choice);
-    if (choice == 1) {
-      menu.display();
-      continue;
-    } else if (choice == 4) {
+
+    if (choice == 4) {
       break;
     }
-    std::cout << "Enter your choice: ";
-    std::cin >> choice;
   }
 }
